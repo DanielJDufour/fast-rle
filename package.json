@@ -1,0 +1,29 @@
+{
+  "name": "fast-rle",
+  "version": "0.0.0",
+  "description": "Fast Run Length Encoder and Decoder",
+  "main": "index.js",
+  "scripts": {
+    "test": "ava"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DanielJDufour/fast-rle.git"
+  },
+  "keywords": [
+    "RLE",
+    "run-length",
+    "binary",
+    "compression",
+    "run-length-encode"
+  ],
+  "author": "Daniel J. Dufour",
+  "license": "CC0-1.0",
+  "bugs": {
+    "url": "https://github.com/DanielJDufour/fast-rle/issues"
+  },
+  "homepage": "https://github.com/DanielJDufour/fast-rle#readme",
+  "devDependencies": {
+    "ava": "^3.8.2"
+  }
+}
