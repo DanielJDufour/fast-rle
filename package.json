@@ -1,6 +1,6 @@
 {
   "name": "fast-rle",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Fast Run Length Encoder and Decoder",
   "main": "index.js",
   "scripts": {

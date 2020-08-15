@@ -1,3 +1,4 @@
 module.exports = {
-  decode: require('./decode')
+  decode: require('./decode'),
+  encode: require('./encode')
 };
