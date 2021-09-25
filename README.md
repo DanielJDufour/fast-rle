@@ -12,10 +12,10 @@ const decoded = decode(encoded);
 ```
 ## encoding
 ```javascript
-import encode from 'fast-rle/decode';
+import encode from 'fast-rle/encode';
 
 const numbers = [3, 3, 3, 3, 3, 8, 0, 0];
-const encoded = decode(numbers);
+const encoded = encode(numbers);
 // [5, 3, 1, 8, 2, 0]
 ```
 
