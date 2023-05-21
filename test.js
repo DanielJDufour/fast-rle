@@ -1,16 +1,32 @@
-const test = require('ava');
-const decode = require('./decode');
-const encode = require('./encode');
+const test = require("flug");
+const decode = require("./decode");
+const encode = require("./encode");
 
 const decoded = [3, 3, 3, 3, 3, 8, 0, 0];
 const encoded = [5, 3, 1, 8, 2, 0];
+const encoded_2 = [2, 3, 2, 3, 1, 3, 1, 8, 2, 0];
+const chunked = [
+  [3, 5],
+  [8, 1],
+  [0, 2]
+];
 
-test('decode', t => {
+test("decode", ({ eq }) => {
   const actual = decode(encoded);
-  t.deepEqual(actual, decoded);
+  eq(actual, decoded);
 });
 
-test('encoded', t => {
+test("encoded", ({ eq }) => {
   const actual = encode(decoded);
-  t.deepEqual(actual, encoded);
+  eq(actual, encoded);
+});
+
+test("encoded with max run length", ({ eq }) => {
+  const actual = encode(decoded, { max_run_length: 2 });
+  eq(actual, encoded_2);
+});
+
+test("encoded with chunking", ({ eq }) => {
+  const actual = encode(decoded, { chunk: true });
+  eq(actual, chunked);
 });

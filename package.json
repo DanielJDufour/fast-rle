@@ -4,7 +4,8 @@
   "description": "Fast Run Length Encoder and Decoder",
   "main": "index.js",
   "scripts": {
-    "test": "ava"
+    "format": "npx prettier --arrow-parens=avoid --trailing-comma=none --write *.js",
+    "test": "node test"
   },
   "repository": {
     "type": "git",
@@ -24,6 +25,6 @@
   },
   "homepage": "https://github.com/DanielJDufour/fast-rle#readme",
   "devDependencies": {
-    "ava": "^3.8.2"
+    "flug": "^2.6.0"
   }
 }
