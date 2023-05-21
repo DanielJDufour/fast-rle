@@ -1,6 +1,6 @@
 const test = require("flug");
 const decode = require("./decode");
-const encode = require("./encode");
+const encode = require("./encode.js");
 
 const decoded = [3, 3, 3, 3, 3, 8, 0, 0];
 const encoded = [5, 3, 1, 8, 2, 0];
@@ -29,4 +29,11 @@ test("encoded with max run length", ({ eq }) => {
 test("encoded with chunking", ({ eq }) => {
   const actual = encode(decoded, { chunk: true });
   eq(actual, chunked);
+});
+
+const len = 10_000_000;
+const nums = new Uint8Array(len);
+for (let i = 0; i <= len; i++) nums[i] = Math.round(Math.random() * 3);
+test("perf", ({ eq }) => {
+  encode(nums);
 });

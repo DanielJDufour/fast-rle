@@ -3,6 +3,11 @@
   "version": "0.0.1",
   "description": "Fast Run Length Encoder and Decoder",
   "main": "index.js",
+  "files": [
+    "index.js",
+    "encode.js",
+    "decode.js"
+  ],
   "scripts": {
     "format": "npx prettier --arrow-parens=avoid --trailing-comma=none --write *.js",
     "test": "node test"
